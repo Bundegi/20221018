@@ -7,6 +7,7 @@ using namespace std;
 bool cmp(pair<int, char> a, pair<int, char> b) {
 	return a.second < b.second;
 }
+//ë°±ì¤€ 1206ë²ˆ
 int main() {
 	fast;
 	vector<pair<int,char>> Array;
@@ -29,10 +30,10 @@ int main() {
 	}
 	sort(Array.begin(), Array.end(),cmp);
 	vector<char> Alpa(Hansoo.size());
-	int count = 0;//Alpa¹è¿­¿¡ ÀÎµ¦½º +-¸¦ ÇØÁÙ °ª
+	int count = 0;//Alpaë°°ì—´ì— ì¸ë±ìŠ¤ +-ë¥¼ í•´ì¤„ ê°’
 	if (Hansoo.size() % 2 == 0) {
 		for(int i=0;i<Array.size();i++){
-			while (Array[i].first!=0) {//0ÀÌ ¾Æ´Ò¶§±îÁö
+			while (Array[i].first!=0) {//0ì´ ì•„ë‹ë•Œê¹Œì§€
 				Alpa[count] = Array[i].second;
 				Alpa[Alpa.size() - count - 1] = Array[i].second;
 				Array[i].first -= 2;
@@ -52,7 +53,7 @@ int main() {
 				}
 				flag = 1;
 			}
-			while (Array[i].first != 0) {//0ÀÌ ¾Æ´Ò¶§±îÁö
+			while (Array[i].first != 0) {//0ì´ ì•„ë‹ë•Œê¹Œì§€
 				Alpa[count] = Array[i].second;
 				Alpa[Alpa.size() - count - 1] = Array[i].second;
 				Array[i].first -= 2;
